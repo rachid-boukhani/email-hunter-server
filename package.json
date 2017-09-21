@@ -15,7 +15,7 @@
   "homepage": "https://github.com/rachid-boukhani/email-hunter-server#readme",
 
   "scripts": {
-    "build": "coffee -o dist/ -c src/",
+    "build": "coffee -c src/ -o dist/",
     "start": "npm run build && ./node_modules/.bin/babel-node dist/index.js --presets es2015,stage-2",
     "dev": "NODE_ENV=development nodemon --inspect --exec babel-node index.js --presets es2015,stage-2"
   },
