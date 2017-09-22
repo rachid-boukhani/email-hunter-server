@@ -1,0 +1,16 @@
+if message
+    if message.error
+        .alert.alert-danger.fade.in
+            button.close(type='button', data-dismiss='alert')
+                i.fa.fa-times-circle-o
+            div= message.error
+    if message.info
+        .alert.alert-info.fade.in
+            button.close(type='button', data-dismiss='alert')
+                i.fa.fa-times-circle-o
+            div= message.info
+    if message.success
+        .alert.alert-success.fade.in
+            button.close(type='button', data-dismiss='alert')
+                i.fa.fa-times-circle-o
+            div= message.success

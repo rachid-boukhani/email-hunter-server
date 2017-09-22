@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    .page-header
+        h2
+            i.fa.fa-search
+            =user.email + ' searches'
+    div.add_search
+        a.btn.btn-primary(href='/search/add')
+            i.fa.fa-plus-circle
+            | Create a new search
+
+        input.light-table-filter.form-control(type='text', data-table="order-table", placeholder='Filter')
+
+    table.table.table-striped.table-bordered.order-table
+        thead
+            tr
+                th Name
+                th Domains
+                th Action
+        tbody
+            for search in searches
+                tr
+                    td= search.name
+                    if search.domains
+                        td
+                            each domain in search.domains
+                                span= domain + ' '
+                        td
+                            a(href="/run/" + search._id) Run

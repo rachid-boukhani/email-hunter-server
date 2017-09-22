@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+    .page-header
+        h2
+            i.fa.fa-search
+            =search.name + ' results'
+
+    div.add_search
+        a.btn.btn-primary(href='/search/add')
+            i.fa.fa-plus-circle
+            | Create a new search
+
+    table.table.table-striped.table-bordered
+        thead
+            tr
+                th Domain
+                th Total Count
+                th Personal Count
+                th Generic Count
+        tbody
+            for item in results
+                tr
+                    td= item.domain
+                    td= item.total
+                    td= item.personal
+                    td= item.generic
