@@ -15,7 +15,8 @@
   "homepage": "https://github.com/rachid-boukhani/email-hunter-server#readme",
   "scripts": {
     "build": "rm -rf dist/* && coffee -o dist/ -c ./",
-    "start": "NODE_ENV=development npm run build && nodemon dist/server.js",
+    "cp": "cp dist/utils/app.js public/js/",
+    "start": "NODE_ENV=development npm run build && npm run cp && nodemon dist/server.js",
     "dev": "NODE_ENV=development nodemon --inspect server.js"
   },
   "dependencies": {
