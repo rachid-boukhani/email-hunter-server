@@ -11,8 +11,8 @@ module.exports = (app) ->
   app.set 'view engine', 'pug'
   app.use helmet()
   app.use sass(
-    src: path.join(__dirname, 'public')
-    dest: path.join(__dirname, 'public')
+    src: path.join(__dirname, '../../', 'public')
+    dest: path.join(__dirname, '../../', 'public')
     debug: true
     outputStyle: 'compressed')
   # app.use(morgan('dev'));

@@ -25,6 +25,6 @@ block content
                     if search.domains
                         td
                             each domain in search.domains
-                                span= domain + ' '
+                                code.highlighter-rouge= domain
                         td
                             a(href="/run/" + search._id) Run
