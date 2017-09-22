@@ -4,3 +4,5 @@ module.exports =
   seed: process.env.NODE_ENV == 'development'
   db: url: process.env.MONGODB_URI or 'mongodb://localhost/emailhunter'
   API: path: 'https://api.hunter.io/v2/email-count?domain=[:domain]'
+
+  
