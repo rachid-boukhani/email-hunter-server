@@ -14,10 +14,10 @@
   },
   "homepage": "https://github.com/rachid-boukhani/email-hunter-server#readme",
   "scripts": {
-    "build": "rm -rf dist/* && ./node_modules/.bin/coffee -o dist/ -c ./",
+    "build": "rm -rf dist && mkdir dist/ && ./node_modules/.bin/coffee -o dist/ -c ./",
     "cp": "cp dist/utils/app.js public/js/",
-    "start": "NODE_ENV=development npm run build && npm run cp && nodemon dist/server.js",
-    "dev": "NODE_ENV=development nodemon --inspect server.js"
+    "start": "NODE_ENV=development npm run build && npm run cp && node dist/server.js",
+    "dev": "NODE_ENV=development node --inspect server.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
