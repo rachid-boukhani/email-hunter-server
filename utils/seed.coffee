@@ -28,7 +28,7 @@ searches = [
   {
     name: 'Telecommunications Companies'
     domains: [
-      'verizon.cm'
+      'verizon.com'
       'att.com'
       'vodafone.com'
     ]
